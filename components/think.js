@@ -1,18 +1,27 @@
 import * as React from 'react';
-import { Button, View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Button, View, Text, StyleSheet } from 'react-native';
+import { Component } from 'react/cjs/react.production.min';
 
-function Think({ navigation }) {
+class Think extends Component {
+  render () {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={styles.container}>
         <Text>Critical Thinkers</Text>
         <Button
-          title="Go to home"
-          onPress={() => navigation.navigate('Home')}
+          title="Go Home"
+          onPress={() => this.props.navigation.navigate('Dashboard')}
         />
       </View>
     );
   }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, 
+    alignItems: 'center', 
+    justifyContent: 'center'
+  }
+});
 
 export default Think;

@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import firebase from '../database/firebase';
+
 export default class Dashboard extends Component {
   constructor() {
     super();
@@ -15,6 +16,8 @@ export default class Dashboard extends Component {
     })
     .catch(error => this.setState({ errorMessage: error.message }))
   }  
+
+
   render() {
     this.state = { 
       displayName: firebase.auth().currentUser.displayName,
@@ -25,6 +28,33 @@ export default class Dashboard extends Component {
         <Text style = {styles.textStyle}>
           Hello, {this.state.displayName}
         </Text>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Button
+          title="Change Makers"
+          onPress={() => this.props.navigation.navigate('Change')}
+        />
+        <Button
+          title="Curious Explorers"
+          onPress={() => this.props.navigation.navigate('Explore')}
+        />
+        <Button
+          title="Inclusive Collaborators"
+          onPress={() => this.props.navigation.navigate('Collaborate')}
+        />
+        <Button
+          title="Creative Communicators"
+          onPress={() => this.props.navigation.navigate('Communicate')}
+        />
+        <Button
+          title="Critical Thinkers"
+          onPress={() => this.props.navigation.navigate('Think')}
+        />
+      </View>
+        {/* <Button 
+          color="#3740FE"
+          title="View Areas"
+          onPress={() => {this.props.navigation.navigate('Screens')}}
+        /> */}
         <Button
           color="#3740FE"
           title="Logout"

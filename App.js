@@ -6,6 +6,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from './components/login';
 import Signup from './components/signup';
 import Dashboard from './components/dashboard';
+import Think from './components/think';
+import Communicate from './components/communicate';
+import Change from './components/change';
+import Collaborate from './components/collaborate';
+import Explore from './components/explore';
 
 const Stack = createStackNavigator();
 
@@ -41,6 +46,51 @@ function MyStack() {
        component={Dashboard} 
        options={
          { title: 'Dashboard' },
+         {headerLeft: null} 
+       }
+      />
+      <Stack.Screen
+       initialRouteName="Dashboard"
+       name="Think" 
+       component={Think} 
+       options={
+         { title: 'Think' },
+         {headerLeft: null} 
+       }
+      />
+      <Stack.Screen
+       initialRouteName="Dashboard"
+       name="Communicate" 
+       component={Communicate} 
+       options={
+         { title: 'Communicate' },
+         {headerLeft: null} 
+       }
+      />
+      <Stack.Screen
+       initialRouteName="Dashboard"
+       name="Change" 
+       component={Change} 
+       options={
+         { title: 'Change' },
+         {headerLeft: null} 
+       }
+      />
+      <Stack.Screen
+       initialRouteName="Dashboard"
+       name="Collaborate" 
+       component={Collaborate} 
+       options={
+         { title: 'Collaborate' },
+         {headerLeft: null} 
+       }
+      />
+      <Stack.Screen
+       initialRouteName="Dashboard"
+       name="Explore" 
+       component={Explore} 
+       options={
+         { title: 'Explore' },
          {headerLeft: null} 
        }
       />
