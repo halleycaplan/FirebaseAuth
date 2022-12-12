@@ -11,6 +11,9 @@ import Communicate from './components/communicate';
 import Change from './components/change';
 import Collaborate from './components/collaborate';
 import Explore from './components/explore';
+import Post1 from './components/Post1';
+import Post2 from './components/Post2';
+import Post3 from './components/Post3';
 
 const Stack = createStackNavigator();
 
@@ -94,7 +97,35 @@ function MyStack() {
          {headerLeft: null} 
        }
       />
+    <Stack.Screen
+       initialRouteName="Dashboard"
+       name="Post1" 
+       component={Post1} 
+       options={
+         { title: 'Post1' },
+         {headerLeft: null} 
+       }
+      />
+   <Stack.Screen
+       initialRouteName="Dashboard"
+       name="Post2" 
+       component={Post2} 
+       options={
+         { title: 'Post2' },
+         {headerLeft: null} 
+       }
+      />
+    <Stack.Screen
+       initialRouteName="Dashboard"
+       name="Post3" 
+       component={Post3} 
+       options={
+         { title: 'Post3' },
+         {headerLeft: null} 
+       }
+      />
     </Stack.Navigator>
+      
   );
 }
 export default function App() {

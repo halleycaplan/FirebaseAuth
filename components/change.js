@@ -8,6 +8,18 @@ class Change extends Component {
       <View style={styles.container}>
         <Text>Change Makers</Text>
         <Button
+          title="Post1"
+          onPress={() => this.props.navigation.navigate('Post1')}
+        />
+        <Button
+          title="Post2"
+          onPress={() => this.props.navigation.navigate('Post2')}
+        />
+        <Button
+          title="Post3"
+          onPress={() => this.props.navigation.navigate('Post3')}
+        />
+        <Button
           title="Go Home"
           onPress={() => this.props.navigation.navigate('Dashboard')}
         />
