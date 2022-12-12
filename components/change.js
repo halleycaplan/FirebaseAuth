@@ -13,9 +13,11 @@ class Change extends Component {
         />
         <Button
           title="Post2"
+          onPress={() => this.props.navigation.navigate('Post2')}
         />
         <Button
           title="Post3"
+          onPress={() => this.props.navigation.navigate('Post3')}
         />
         <Button
           title="Go Home"
