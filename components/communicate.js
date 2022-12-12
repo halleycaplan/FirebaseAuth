@@ -8,6 +8,15 @@ class Communicate extends Component {
       <View style={styles.container}>
         <Text>Creative Communicators</Text>
         <Button
+          title="Post1"
+        />
+        <Button
+          title="Post2"
+        />
+        <Button
+          title="Post3"
+        />
+        <Button
           title="Go Home"
           onPress={() => this.props.navigation.navigate('Dashboard')}
         />
